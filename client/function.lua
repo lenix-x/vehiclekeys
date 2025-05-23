@@ -13,7 +13,14 @@ end
 
 function outSide(isAdvanced)
     local config = isAdvanced and outAdvanced or outNormal
-    local success = exports[outExport]:createGame(table.unpack(config))
-    ---@param you_can_only_change THIS ↑↑↑↑↑↑↑↑
+    local success
+    exports[outExport]:skill_circle(config, function(gameResult)
+        success = gameResult
+        if gameResult == 'perfect' then success = true elseif gameResult == 'success' then success = true else success = false end
+    end)
+    while success == nil do
+        Wait(100)
+    end
+
     return success
 end
