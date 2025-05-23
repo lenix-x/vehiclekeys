@@ -5,19 +5,19 @@ Config.System = {
     inventory = 'qb-inventory',
     weapons = 'qb-weapons',
     input = 'ox_lib',
-    OutSideMinigame = {
-        isWindowUnBreakable = true,
-        export = '2na_lockpick',
-        configuration = {
-            isAdvanced = {2, 5},
-            isNormal = {5, 2}
-        }
-    },
     InSideMinigame = {
         export = 't3_lockpick',
         configuration = {
-            isAdvanced = {1, 4, 5},
-            isNormal = {3, 7, 9}
+            isAdvanced = {3, 7, 5},
+            isNormal = {1, 4, 9}
+        }
+    },
+    OutSideMinigame = {
+        isWindowUnBreakable = true,
+        export = 'boii_minigames',
+        configuration = {
+            isAdvanced = {style = 'default', icon = 'fa-solid fa-paw', area_size = 4, speed = 0.02,},
+            isNormal = {style = 'default', icon = 'fa-solid fa-paw', area_size = 6, speed = 0.06,},
         }
     }
 }
