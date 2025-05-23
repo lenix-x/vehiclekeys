@@ -1,16 +1,16 @@
 Config = {}
 Config.System = {
-    trigger = GetCurrentResourceName(),
+    trigger = 'qb-vehiclkeys',
     core = 'qb-',
     inventory = 'qb-inventory',
     weapons = 'qb-weapons',
     input = 'ox_lib',
     OutSideMinigame = {
         isWindowUnBreakable = true,
-        export = 'karma-repairskill',
+        export = '2na_lockpick',
         configuration = {
-            isAdvanced = {40},
-            isNormal = {20}
+            isAdvanced = {2, 5},
+            isNormal = {5, 2}
         }
     },
     InSideMinigame = {
